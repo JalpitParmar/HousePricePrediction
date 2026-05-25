@@ -1,0 +1,25 @@
+body {
+    background: linear-gradient(to right, #141e30, #243b55);
+    min-height: 100vh;
+    color: white;
+}
+
+.card {
+    background: white;
+    color: black;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+.result-box {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+button {
+    font-size: 18px;
+}
