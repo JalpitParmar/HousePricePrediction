@@ -303,6 +303,51 @@ h5{
         padding:18px;
     }
 }
+.tooltip {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+
+    width: 240px;
+    background-color: #111;
+    color: #fff;
+
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+
+    position: absolute;
+    z-index: 10;
+
+    bottom: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    transition: opacity 0.3s ease;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #111 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
     </style>
 
 </head>
@@ -348,21 +393,19 @@ h5{
 
 <div class="col-lg-3">
 
-    <div class="top-box">
+    <h6 class="tooltip">
+    MAE
+    <span class="tooltip-text">
+        Mean Absolute Error: average absolute difference between predicted and actual values.
+    </span>
+</h6>
 
-        <h6>MAE</h6>
-
-        <h3>$829009</h3>
-
-    </div>
-
-    <div class="top-box">
-
-        <h6>MSE</h6>
-
-        <h3>1148258170491</h3>
-
-    </div>
+    <h6 class="tooltip">
+    MSE
+    <span class="tooltip-text">
+        Mean Squared Error: average of squared differences, penalizes large errors more.
+    </span>
+</h6>
 
 </div>
 
@@ -370,21 +413,18 @@ h5{
 
 <div class="col-lg-3">
 
-    <div class="top-box">
-
-        <h6>RMSE</h6>
-
-        <h3>1071568</h3>
-
-    </div>
-
-    <div class="top-box">
-
-        <h6>MAPE</h6>
-
-        <h3>17.59%</h3>
-
-    </div>
+    <h6 class="tooltip">
+    RMSE
+    <span class="tooltip-text">
+        Root Mean Squared Error: square root of MSE, same unit as target value.
+    </span>
+</h6>
+    <h6 class="tooltip">
+    MAPE
+    <span class="tooltip-text">
+        Mean Absolute Percentage Error: shows prediction error in percentage form.
+    </span>
+</h6>
 
 </div>
 
